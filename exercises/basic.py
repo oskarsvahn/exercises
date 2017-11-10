@@ -31,3 +31,15 @@ def sum_of_cubes(x):
     x = 4: 1^3 + 2^3 + 3^3 + 3^4 = 100
     '''
     pass
+
+
+def savings_calculator(inital_amount, monthly_deposit, annual_interest, years):
+    '''Beräkna värdet för ett månadssparande efter `years` år.
+
+    Sparandet startas med beloppet `intial_amount` kronor och varje månad
+    inbetalas beloppet `monthly_deposit` kronor.
+
+    Räntan utbetalas månadsvis (`annual_interest` / 12). Räntan anges i procent.
+    Argumentet `years` anger hur många hela år sparandet kommer att fortgå.
+    '''
+    pass
