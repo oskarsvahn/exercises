@@ -5,7 +5,23 @@ def factorial(x):
 
     Returnera en lista med alla faktorer för talet `x`.
     '''
-    pass
+#for x in range(0, x):
+#    if x%2.isdigit
+#        return prime
+#    else:
+    primes = []
+    test = 2
+    if x==1:
+        return[1]
+    else:
+        while (x>=1):
+            if x % test == 0:
+                x = x / test
+                primes.append(test)
+            else:
+                test += 1
+        return primes
+
 
 
 def yahtzee_score(dice, round):
@@ -31,7 +47,31 @@ def yahtzee_score(dice, round):
     Yatzy       'yahtzee'
     Chans       'chance'
     '''
-    pass
+    if round == yahtzee:
+        return 50
+
+    elif round == large_straight:
+        return 20
+    elif round == small_straight:
+        return 15
+    elif round == full house:
+        return 28
+    elif round == chans:
+        return sum
+    elif round == aces:
+        for ettor in dice:
+            ruturn sum()
+
+        
+    for cards in dice:
+        if cards == 12345:
+        elif cards == 23456:
+            return sum(cards)
+        if cards == 1:
+            return
+    if dice == aces:
+        return sum(dice)
+    if dice
 
 
 def blackjack_score(cards):
