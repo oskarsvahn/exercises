@@ -43,6 +43,6 @@ def test_sum_of_cubes():
 
 
 @pytest.mark.skip('Not yet implemented.')
-def test_savings_calculator()
+def test_savings_calculator():
     assert abs(savings_calculator(10000, 200, 0, 5) - 22000) < 0.1
     assert abs(savings_calculator(10000, 200, 6.0, 5) - 27442.51) < 0.1

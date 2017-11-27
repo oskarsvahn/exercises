@@ -47,8 +47,63 @@ def yahtzee_score(dice, round):
     Yatzy       'yahtzee'
     Chans       'chance'
     '''
-    pass
+    ettor = 0
+    tvåor = 0
+    treor = 0
+    fyror = 0
+    femmor = 0
+    sexor = 0
+    for nummer in dice:
+        if nummer == 1:
+            ettor +=1
+        if nummer == 2:
+            tvåor +=1
+        if nummer == 3:
+            treor += 1
+        if nummer == 4:
+            fyror +=1
+        if nummer == 5:
+            femmor +=1
+        if nummer == 6:
+            sexor +=1
 
+
+
+    if round == 'yahtzee':
+        if ettor or tvåor or treor or fyror or femmor or sexor == 5:
+            return 50
+    elif round == 'large_straight':
+        if 6 in dice and 2 in dice and 3 in dice and 4 in dice and 5 in dice:
+            return 20
+    elif round == 'small_straight':
+        if 1 in dice and 2 in dice and 3 in dice and 4 in dice and 5 in dice:
+            return 15
+    elif round == 'triss':
+        if sexor == 3:
+            return 3 * 6
+        if femmor == 3:
+            return 3 * 5
+        if fyror == 3:
+            return 3 * 4
+        if treor == 3:
+            return 3 * 3
+        if tvåor == 3:
+            return 3 * 2
+        if ettor == 3:
+            return 3 * 1
+
+    elif round == 'aces':
+            return sum(ettor)
+    elif round == 'twos':
+            return sum(tvåor)
+    elif round == 'threes':
+            return sum(treor)
+    elif round == 'fours':
+            return sum(fyror)
+    elif round == 'fives':
+            return sum(femmor)
+    elif round == 'sixes':
+            return sum(sexor)
 
 def blackjack_score(cards):
     '''Räkna ut poängen för en korthand i blackjack.
